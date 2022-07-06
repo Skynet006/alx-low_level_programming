@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 #include <main.h>
 
 /**
 * main -  prints _putchar, followed by a new line
 * Return: Always 0 (Success)
+=======
+#include <stdio.h>
+#include "main.h"
+
+/**
+* main - Prints "_putchar" followed by a new line.
+*
+* Return: Always 0.
+>>>>>>> 03993ed3839c548875adc6c75e239a239f55e4d8
 */
 int main(void)
 {
