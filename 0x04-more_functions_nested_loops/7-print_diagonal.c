@@ -21,5 +21,5 @@ _putchar('\n');
 i++;
 }
 if (i == 0)
-putchar('\n');
+_putchar('\n');
 }
