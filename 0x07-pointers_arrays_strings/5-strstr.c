@@ -3,9 +3,10 @@
 
 /**
  * *_strstr - description
- * @haystack: string
- * @needle: pointer
- * Return: pointer
+ * @haystack: strings to scan
+ * @needle: string to compare haystack to
+ * Return: pointer to the begining of the located substring
+ * or NULL if the substring is not found
  */
 
 char *_strstr(char *haystack, char *needle)
