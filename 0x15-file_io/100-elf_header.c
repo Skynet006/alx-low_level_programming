@@ -23,9 +23,7 @@ void print_addr(char *ptr)
 	if (sys == '1')
 	{
 		begin = 26;
-
 		printf("80");
-
 		for (i = begin; i >= 22; i--)
 		{
 			if (ptr[i] > 0)
@@ -36,14 +34,15 @@ void print_addr(char *ptr)
 		if (ptr[7] == 6)
 			printf("00");
 	}
+
 	if (sys == '2')
 	{
 		begin = 26;
-
 		for (i = begin; i > 23; i--)
 		{
 			if (ptr[i] >= 0)
 				printf("%02x", ptr[i]);
+
 			else if (ptr[i] < 0)
 				printf("%02x", 256 + ptr[i]);
 		}
@@ -64,6 +63,7 @@ void print_type(char *ptr)
 		type = ptr[16];
 	else
 		type = ptr[17];
+
 	printf("  Type:                              ");
 	if (type == 0)
 		printf("NONE (No file type)\n");
@@ -97,6 +97,7 @@ void print_osabi(char *ptr)
 		printf("UNIX - Solaris\n");
 	else
 		printf("<unknown: %x>\n", osabi);
+
 	printf("  ABI Version:                       %d\n", ptr[8]);
 }
 
@@ -110,10 +111,13 @@ void print_version(char *ptr)
 	int version = ptr[6];
 
 	printf("  Version:                           %d", version);
+
 	if (version == EV_CURRENT)
 		printf(" (current)");
+
 	printf("\n");
 }
+
 /**
  * print_data - prints data
  * @ptr: magic.
@@ -126,9 +130,11 @@ void print_data(char *ptr)
 	printf("  Data:                              2's complement");
 	if (data == 1)
 		printf(", little endian\n");
+
 	if (data == 2)
 		printf(", big endian\n");
 }
+
 /**
  * print_magic - prints magic info.
  * @ptr: magic.
@@ -139,8 +145,10 @@ void print_magic(char *ptr)
 	int bytes;
 
 	printf("  Magic:  ");
+
 	for (bytes = 0; bytes < 16; bytes++)
 		printf(" %02x", ptr[bytes]);
+
 	printf("\n");
 
 }
@@ -205,6 +213,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n");
 		exit(98);
 	}
+
 	fd = open(argv[1], O_RDONLY);
 
 	if (fd < 0)
@@ -212,6 +221,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Err: file can not be open\n");
 		exit(98);
 	}
+
 	lseek(fd, 0, SEEK_SET);
 	ret_read = read(fd, ptr, 27);
 
