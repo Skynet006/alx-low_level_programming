@@ -2,6 +2,7 @@
 
 """Defines an island perimeter measuring function."""
 
+
 def island_perimeter(grid):
 
     """Return the perimiter of an island.
@@ -19,7 +20,6 @@ def island_perimeter(grid):
     edges = 0
 
     size = 0
-
 
 
     for i in range(height):
