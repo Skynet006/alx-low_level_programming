@@ -4,8 +4,6 @@
 
 
 
-
-
 def island_perimeter(grid):
 
     """Return the perimiter of an island.
