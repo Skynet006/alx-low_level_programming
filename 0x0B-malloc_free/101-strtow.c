@@ -54,7 +54,7 @@ char **strtow(char *str)
 					ch_free_grid(aout, i);
 					return (NULL);
 				}
-				beak;
+				break;
 			}
 		}
 		for (j = 0; a1 <= c; a1++, j++)
