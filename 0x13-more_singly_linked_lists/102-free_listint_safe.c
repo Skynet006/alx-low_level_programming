@@ -9,7 +9,7 @@
  * @size: size of the new list (always one more than the old list)
  * @new: new node to add to the list
  *
- * Return: pointer to the new list
+ * Return: pointer to the new list.
  */
 listint_t **_ra(listint_t **list, size_t size, listint_t *new)
 {

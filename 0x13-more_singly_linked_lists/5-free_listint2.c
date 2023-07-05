@@ -6,7 +6,7 @@
  * So, as we know the tail always points to NULL, we will
  * be moving a temp pointer, free its memory if not NULL
  * Untill we reach the tail
- * @head: head of linked list
+ * @head: head of linked list.
  */
 
 void free_listint2(listint_t **head)
