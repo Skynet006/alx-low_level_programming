@@ -3,9 +3,9 @@
 
 /**
  * print_listint - print elements of linkedlist
- * @h: linked list
+ * @h: linked list.
  *
- * Return: number of nodes
+ * Return: number of nodes.
  */
 
 size_t print_listint(const listint_t *h)
