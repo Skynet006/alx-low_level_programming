@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * shash_table_create - creates a shash table with a given size
+ * shash_table_create - This creates a shash table with a given size
  *
  * @size: size of  shash table
  * Return:  created shash table, or NULL if function fails

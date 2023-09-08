@@ -1,12 +1,12 @@
 #include "hash_tables.h"
 
 /**
- * add_n_hash - adds a node at  beginning of a hash at a given index
+ * add_n_hash - Function adds a node at  beginning of a hash at a given index
  *
  * @head: head of  hash linked list
  * @key: key of  hash
  * @value: value to store
- * Return: head of  hash
+ * Return: head of  hash.
  */
 hash_node_t *add_n_hash(hash_node_t **head, const char *key, const char *value)
 {

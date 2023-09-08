@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 
 /**
- * key_index - fn that generates a distributed index
- * according to a given hash
+ * key_index - this function generates a distributed index
+ * according to a given hash.
  *
  * @key: key passed
  * @size: size of hash tables
